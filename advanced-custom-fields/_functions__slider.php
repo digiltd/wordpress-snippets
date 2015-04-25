@@ -3,6 +3,10 @@
 /**
  * Markup for a Flickity slider using an ACF repeater field
  *
+ * The large amount of comments are because I used this as an example on why returning image arrays are not a good idea
+ *
+ * read more here https://gist.github.com/digiltd/12ccb9429ebf01cd99d3
+ *
  * @return html
  *
  */
