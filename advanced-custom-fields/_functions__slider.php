@@ -2,7 +2,9 @@
 
 /**
  * Markup for a Flickity slider using an ACF repeater field
- * @return [type] [description]
+ *
+ * @return html
+ *
  */
 function digi_get_content_block__slider() {
 
