@@ -1,10 +1,12 @@
 # WordPress project setup
 
-This is the way I seperate the core WordPress bits, into the core stuff that I don't version control and the stuff I do.
+This is the way I seperate the core WordPress bits, into the wp-core stuff that I don't version control and all the other stuff I do.
 
 ***
 
-#### To version control plugins or not version control plugins (aka plugin dependencies)
+## Dependencies
+
+**To version control plugins or not version control plugins ?**
 
 Originally I used the TGM-Plugin-Activation class with the idea that it would save space in the repos. Then each version of the site (staging, local etc) would have to download and install the plugins separately. Which was the better way according to the interwebs.
 
@@ -14,14 +16,14 @@ One biggie is I use Git (via BeanStalk) to deploy changes and WP Migrate DB Pro 
 
 I use Git solo, so now I just version control all the plugins, no biggie.
 
-I use BeanStalk so I don't feel too guilty using slightly more space than I need.
+I use a paid repo (BeanStalk) so I don't feel too guilty using slightly more space than I need.
 
 More than once I have benefited from being able to revert back to an older version of a plugin (usually WooCommerce) when the update caused problems.
 
-Shock horror!!! I also version control my bower_components for similar reasons. I use the /bower_componants/library/file.css paths in my enqueues which I call conditionaly like a good boy. But when I deploy, those files don't exist because they are not in repo for BeanStalk to transfer to the server.
+My other dirty secret is I also version control my bower_components for similar reasons. I use the /bower_componants/library/file.css paths in my enqueues which I call conditionaly like a good boy. But when I deploy, those files don't exist because they are not in repo for BeanStalk to transfer to the server.
 
 
-# Installation
+## Installation
 
 Create your folder in the place you put your local files. In my case a folder in my home directory
 
@@ -71,3 +73,5 @@ Setup the database and domain in MAMP and edit the wp-config file accordingly
 ***
 
 Make sure you do a nice clean commit before editing the theme, and don't stage the wrp folder.
+
+There are bash scripts out there that automate the whole process, including all the mysql setup and account creation. I'm not sure that spending a few hours setting it up on all machines will save me the 5 minutes or so it takes to do it manually.
