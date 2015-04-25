@@ -2,9 +2,11 @@
 
 This is the way I seperate the core WordPress bits, into the core stuff that I don't version control and the stuff I do.
 
+***
+
 #### To version control plugins or not version control plugins (aka plugin dependencies)
 
-Originally I used the TGM-Plugin-Activation class with the idea that it would save space in the repos.
+Originally I used the TGM-Plugin-Activation class with the idea that it would save space in the repos. Then each version of the site (staging, local etc) would have to download and install the plugins separately. Which was the better way according to the interwebs.
 
 The reality of having to manually mess about downloading, installing and activating plugins every time I moved the site from my different machines and the different servers caused more problems than it was worth.
 
@@ -15,6 +17,8 @@ I use Git solo, so now I just version control all the plugins, no biggie.
 I use BeanStalk so I don't feel too guilty using slightly more space than I need.
 
 More than once I have benefited from being able to revert back to an older version of a plugin (usually WooCommerce) when the update caused problems.
+
+Shock horror!!! I also version control my bower_components for similar reasons. I use the /bower_componants/library/file.css paths in my enqueues which I call conditionaly like a good boy. But when I deploy, those files don't exist because they are not in repo for BeanStalk to transfer to the server.
 
 
 # Installation
