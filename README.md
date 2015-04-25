@@ -1,6 +1,6 @@
 # WordPress Snippets
 
-## Random bits that I tend use when developling WordPress templates
+## Random bits that I tend use when developing WordPress templates
 
 ***
 
